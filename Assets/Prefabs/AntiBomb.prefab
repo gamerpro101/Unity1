@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 50937335128210624}
   - component: {fileID: 58146592475081248}
   m_Layer: 0
-  m_Name: Bomb
-  m_TagString: Bomb
+  m_Name: AntiBomb
+  m_TagString: AntiBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 05167a4d8ef2648e6b866f84d52aad0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9491ae9dffe94bcfbd3c126ccd2b036, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

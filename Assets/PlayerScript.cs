@@ -71,6 +71,10 @@ public class PlayerScript : MonoBehaviour {
 		if (target.tag == "Bomb") {
 			Time.timeScale = 0f;
 		}
+		if (target.tag == "AntiBomb")
+		{
+			target.gameObject.SetActive(false);
+		}
 	}
 
 } // class

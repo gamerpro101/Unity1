@@ -278,7 +278,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 492096010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22d7425ca8d74babbda67420ac33970, type: 3}
+  m_Script: {fileID: 11500000, guid: 24782084cfc024ab7a82677b3b47eb11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 729901615}
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1155069155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98a0e296e254d40cb974745c83cfeb36, type: 3}
+  m_Script: {fileID: 11500000, guid: 418d86a524a2143af9fbf5422305dd8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
@@ -816,10 +816,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1951050675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed46242198a3b4236898d32950a68f87, type: 3}
+  m_Script: {fileID: 11500000, guid: 15c9e0087da5c4c9a959896eeb9c3bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 1698359898923150, guid: 949dd6acd6f664b349e85593ca569d4c, type: 3}
+  antiBombPrefab: {fileID: 1698359898923150, guid: 35c7e5069b5754cd3a16c0293b8a5649, type: 3}
 --- !u!1 &1990194665
 GameObject:
   m_ObjectHideFlags: 0

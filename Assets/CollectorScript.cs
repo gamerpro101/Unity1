@@ -8,7 +8,7 @@ public class CollectorScript : MonoBehaviour {
 	public Text scoreText;
 	private int score = 0;
 
-	void IncreaseScore() {
+	public void IncreaseScore() {
 		score++;
 
 		scoreText.text = "Score: " + score;
@@ -20,6 +20,10 @@ public class CollectorScript : MonoBehaviour {
 
 			IncreaseScore ();
 			target.gameObject.SetActive (false);
+		}
+		if (target.tag == "AntiBomb")
+        {
+			Time.timeScale = 0f;
 		}
 	}
 

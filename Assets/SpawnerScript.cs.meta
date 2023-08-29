@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 15c9e0087da5c4c9a959896eeb9c3bc7
-timeCreated: 1513690858
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bombPrefab: {fileID: 1698359898923150, guid: 949dd6acd6f664b349e85593ca569d4c, type: 3}
+  - antiBombPrefab: {fileID: 1698359898923150, guid: 35c7e5069b5754cd3a16c0293b8a5649, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
