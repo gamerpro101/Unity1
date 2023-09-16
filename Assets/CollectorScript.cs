@@ -5,25 +5,22 @@ using UnityEngine.UI;
 
 public class CollectorScript : MonoBehaviour {
 
-	public Text scoreText;
-	private int score = 0;
 
-	public void IncreaseScore() {
-		score++;
-
-		scoreText.text = "Score: " + score;
-
-	}
-
-	void OnTriggerEnter2D(Collider2D target) {
+	PlayerScript playerScript;
+	SpawnerScript spawnerScript;
+    void Awake()
+    {
+		playerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
+		spawnerScript = GameObject.Find("Spawner").GetComponent<SpawnerScript>();
+    }
+    void OnTriggerEnter2D(Collider2D target) {
 		if (target.tag == "Bomb") {
-
-			IncreaseScore ();
+			playerScript.IncreaseScore ();
 			target.gameObject.SetActive (false);
 		}
 		if (target.tag == "AntiBomb")
         {
-			Time.timeScale = 0f;
+			spawnerScript.SubtractLife();
 		}
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnerScript : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class SpawnerScript : MonoBehaviour {
 	private float minX = -2.55f;
 	private float maxX = 2.55f;
 
+	public Text livesText;
+	private int lives = 3;
 	void Start () {
 		StartCoroutine (SpawnBombs());
 	}
@@ -32,6 +35,18 @@ public class SpawnerScript : MonoBehaviour {
 
 		StartCoroutine (SpawnBombs());
 
+	}
+	public void LifeUp()
+    {
+		lives++;
+		livesText.text = "lives: " + lives;
+	}
+	public void SubtractLife()
+	{
+		lives--;
+		livesText.text = "lives: " + lives;
+		if (lives == 0)
+			Time.timeScale = 0f;
 	}
 
 

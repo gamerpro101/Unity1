@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -11,6 +12,27 @@ public class PlayerScript : MonoBehaviour {
 	private float minY = -4f;
 	private float maxY = 4f;
 
+	SpawnerScript spawnerScript;
+	public Text scoreText;
+	private int score = 0;
+
+	void Awake()
+	{
+		spawnerScript = GameObject.Find("Spawner").GetComponent<SpawnerScript>();
+	}
+
+	public void IncreaseScore()
+	{
+		score++;
+
+		scoreText.text = "Score: " + score;
+		if (score % 60 == 0)
+		{
+
+			spawnerScript.LifeUp();
+		}
+
+	}
 	void Update () {
 		MovePlayer ();
 	}
@@ -68,11 +90,14 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D target) {
-		if (target.tag == "Bomb") {
-			Time.timeScale = 0f;
+		if (target.tag == "Bomb")
+		{
+			spawnerScript.SubtractLife();
+
 		}
 		if (target.tag == "AntiBomb")
 		{
+			IncreaseScore();
 			target.gameObject.SetActive(false);
 		}
 	}
